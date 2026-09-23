@@ -1,49 +1,159 @@
 # KOVA AUDIO — Landing Page
 
-Landing page cho sản phẩm "The Dial One" (tai nghe không dây có núm vặn analog),
-xây bằng Next.js 14 (App Router) + TypeScript + Tailwind CSS.
+A modern product landing page for **The Dial One**, a wireless headphone featuring an analog control dial.
 
-## Cách chạy trên máy
+Built with **Next.js 14, TypeScript, Tailwind CSS, and the App Router**.
 
-1. Giải nén / clone thư mục này, mở bằng VS Code.
-2. Cài dependencies:
-   ```bash
-   npm install
-   ```
-3. Chạy dev server:
-   ```bash
-   npm run dev
-   ```
-4. Mở http://localhost:3000
+## Preview
 
-## Build production
+> Add a project screenshot here if available.
+
+```md
+![KOVA Audio Preview](./public/preview.png)
+```
+
+## Tech Stack
+
+* **Next.js 14** — App Router
+* **TypeScript**
+* **React**
+* **Tailwind CSS**
+
+## Features
+
+* Responsive product landing page
+* Product-focused hero section
+* Interactive analog dial graphic
+* Product showcase section
+* Technical specifications
+* User testimonials
+* Pre-order call-to-action
+* Responsive navigation and footer
+* Custom animations and visual effects
+
+## Project Structure
+
+```text
+kova-audio/
+├── app/
+│   ├── layout.tsx          # Root layout, fonts and metadata
+│   ├── page.tsx            # Main page and section composition
+│   └── globals.css         # Global styles and dial animations
+│
+├── components/
+│   ├── Header.tsx          # Navigation header
+│   ├── Hero.tsx            # Hero section
+│   ├── DialGraphic.tsx     # Analog dial SVG graphic
+│   ├── ProductShowcase.tsx # Product presentation
+│   ├── SpecSheet.tsx       # Product specifications
+│   ├── Voices.tsx          # User testimonials
+│   ├── Preorder.tsx         # Pre-order CTA
+│   └── Footer.tsx          # Footer
+│
+├── public/
+│   └── ...                 # Static assets
+│
+├── next.config.mjs
+├── package.json
+├── tailwind.config.ts
+├── tsconfig.json
+└── README.md
+```
+
+## Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/truongtnn/kova-audio.git
+cd kova-audio
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Start the development server
+
+```bash
+npm run dev
+```
+
+Open http://localhost:3000 in your browser.
+
+## Production Build
+
+Create an optimized production build:
 
 ```bash
 npm run build
+```
+
+Start the production server:
+
+```bash
 npm run start
 ```
 
-## Cấu trúc project
+## Customization
 
-```
-app/
-  layout.tsx      # font, metadata gốc
-  page.tsx         # ghép các section
-  globals.css      # Tailwind + animation núm vặn
-components/
-  Header.tsx
-  Hero.tsx
-  DialGraphic.tsx  # SVG núm vặn analog
-  ProductShowcase.tsx
-  SpecSheet.tsx
-  Voices.tsx       # đánh giá người dùng
-  Preorder.tsx     # CTA đặt trước
-  Footer.tsx
+### Brand & Product Information
+
+Update the product and brand content in:
+
+```text
+components/Header.tsx
+components/Hero.tsx
+components/Footer.tsx
 ```
 
-## Tuỳ chỉnh nhanh
+### Product Price & Delivery
 
-- Đổi tên thương hiệu / sản phẩm: sửa trong `components/Header.tsx`, `Hero.tsx`, `Footer.tsx`.
-- Đổi giá, ngày giao hàng: `components/Preorder.tsx`.
-- Đổi thông số kỹ thuật: mảng `specs` trong `components/SpecSheet.tsx`.
-- Đổi bảng màu: `tailwind.config.ts` (các màu `amber`, `base`, `panel`, `cream`...).
+Update the price and delivery information in:
+
+```text
+components/Preorder.tsx
+```
+
+### Product Specifications
+
+Product specifications are defined in:
+
+```text
+components/SpecSheet.tsx
+```
+
+Update the `specs` array to change the displayed specifications.
+
+### Theme & Colors
+
+The main color palette and styling configuration can be customized in:
+
+```text
+tailwind.config.ts
+```
+
+Global styles and animations are located in:
+
+```text
+app/globals.css
+```
+
+## Live Demo
+
+Coming soon.
+
+## Author
+
+**Tran Nhat Truong**
+
+Frontend Developer
+
+* GitHub: https://github.com/truongtnn
+* Project: https://github.com/truongtnn/kova-audio
+
+---
+
+Built with Next.js and Ty
