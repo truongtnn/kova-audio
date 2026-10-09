@@ -1,3 +1,5 @@
+import { LinkButton } from "./ui/Button";
+
 const specs: [string, string][] = [
   ["Driver", "40mm, màng titan phủ PU"],
   ["Đáp tuyến tần số", "18Hz – 22kHz"],
@@ -30,6 +32,9 @@ export default function SpecSheet() {
             </div>
           ))}
         </dl>
+        <LinkButton href="/products/dial-one" variant="link" className="mt-8">
+          Xem trang chi tiết The Dial One →
+        </LinkButton>
       </div>
     </section>
   );

@@ -1,4 +1,8 @@
-import DialGraphic from "./DialGraphic";
+import { LinkButton } from "./ui/Button";
+import HeroCarousel from "./HeroCarousel";
+import { products } from "@/lib/products";
+
+const heroSlides = products.slice(0, 4);
 
 export default function Hero() {
   return (
@@ -15,23 +19,16 @@ export default function Hero() {
             trễ, không chạm nhầm khi đang chạy.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-5">
-            <a
-              href="#preorder"
-              className="rounded-sm bg-amber px-6 py-3 font-medium text-base transition-transform hover:translate-y-[-1px]"
-            >
-              Đặt trước hôm nay
-            </a>
-            <a href="#dial" className="text-sm text-cream underline decoration-line underline-offset-4">
+            <LinkButton href="/products">Xem tất cả sản phẩm</LinkButton>
+            <LinkButton href="#dial" variant="ghost">
               Xem núm vặn hoạt động
-            </a>
+            </LinkButton>
           </div>
           <p className="mt-8 font-mono text-xs tracking-wide text-muted">
             32H PIN &nbsp;·&nbsp; DRIVER 40MM &nbsp;·&nbsp; IPX5
           </p>
         </div>
-        <div className="mx-auto aspect-square w-full max-w-sm">
-          <DialGraphic />
-        </div>
+        <HeroCarousel slides={heroSlides} />
       </div>
     </section>
   );
