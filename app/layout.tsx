@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Archivo, Source_Sans_3, IBM_Plex_Mono } from "next/font/google";
+import { CartProvider } from "@/context/CartContext";
 import "./globals.css";
 
 const display = Archivo({
@@ -36,7 +37,10 @@ export default function RootLayout({
       <body
         className={`${display.variable} ${body.variable} ${mono.variable} font-body bg-base text-cream antialiased`}
       >
-        {children}
+        <noscript>
+          <style>{`.reveal { opacity: 1 !important; transform: none !important; }`}</style>
+        </noscript>
+        <CartProvider>{children}</CartProvider>
       </body>
     </html>
   );
