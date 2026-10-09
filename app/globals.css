@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  scrollbar-color: #39352A #14130F;
+}
+
+body {
+  background-color: #14130F;
+  color: #EDE7DA;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.dial-sweep {
+  transform-origin: center;
+  animation: sweep 1.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes sweep {
+  from { transform: rotate(-140deg); opacity: 0; }
+  to { transform: rotate(0deg); opacity: 1; }
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #E8A33D;
+  outline-offset: 3px;
+}
